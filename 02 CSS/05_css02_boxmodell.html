@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>CSS</title>
+		<meta charset="utf-8">
+		<style>
+			.box {
+				background-color:#eee;
+				width:300px;
+				height:300px;
+				/* Platzbedarf: 300x300px */
+				
+				overflow:auto; /* visible (std.) | hidden | auto | scroll */
+				
+				padding:30px;
+				padding-left:150px; /* padding-left, padding-top, padding-bottom, padding-right */
+				/* Platzbedarf: 480x360px */
+				
+				border:10px solid steelblue;
+				border-right:5px dotted pink;
+				/* Platzbedarf: 495x380px */
+				
+				margin:50px;
+				/* Platzbedarf: 495x380px bleibt gleich! */
+			}
+			
+			#b {
+				box-sizing:border-box; /* content-box (std.) | border-box */
+				
+				/* Platzbedarf: 300x300px */
+			}
+			
+			strong {
+				background-color:hsla(60,100%,50%,0.5);
+				padding:20px;
+				border:3px solid orange;
+				margin:10px;
+				width:150px;
+				height:100px;
+				
+				display:inline-block;
+			}
+			
+			.tabelle {
+				display:table;
+			}
+			.tabelle > * {
+				display:table-row;
+			}
+			.tabelle > * > * {
+				display:table-cell;
+				border:1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="a" class="box">
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam <strong>voluptua</strong>. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		</div>
+		<div id="b" class="box">
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+		</div>
+		<table border="1">
+			<tr>
+				<td>1-1</td>
+				<td>1-2</td>
+				<td>1-3</td>
+			</tr>
+			<tr>
+				<td>2-1</td>
+				<td>2-2</td>
+				<td>2-3</td>
+			</tr>
+			<tr>
+				<td>3-1</td>
+				<td>3-2</td>
+				<td>3-3</td>
+			</tr>
+		</table>
+		<div class="tabelle">
+			<div>
+				<div>1-1</div>
+				<div>1-2</div>
+				<div>1-3</div>
+			</div>
+			<div>
+				<div>2-1</div>
+				<div>2-2</div>
+				<div>2-3</div>
+			</div>
+			<div>
+				<div>3-1</div>
+				<div>3-2</div>
+				<div>3-3</div>
+			</div>
+		</div>
+	</body>
+</html>
