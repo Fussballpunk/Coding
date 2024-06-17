@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>JavaScript: Funktion</title>
+		<meta charset="utf-8">
+		<script>
+		function f0() {
+			//Funktion ohne Übergabevariablen und ohne Rückgabewert
+			let a=17, b=23, c;
+			c = a+b;
+			console.log("f0: c=",c);
+		}
+		
+		function f1() {
+			//Funktion ohne Übergabevariablen, jedoch mit Rückgabewert
+			let a=17, b=23, c;
+			c = a+b;
+			console.log("f1: c=",c);
+			return c; //Inhalt der Variable c wird an den "Aufrufer" zurückgegeben
+		}
+		
+		function f2(a,b) {
+			//Funktion mit zwei Übergabevariablen, jedoch ohne Rückgabewert
+			let c;
+			c = a+b;
+			console.log("f2: c=",c);
+		}
+		
+		function f3(a,b) {
+			//Funktion mit zwei Übergabevariablen und einem Rückgabewert
+			let c;
+			c = a+b;
+			console.log("f3: c=",c);
+			return c;
+		}
+
+		function f4(a=17,b=23) {
+			//Funktion mit zwei Übergabevariablen, jedoch ohne Rückgabewert
+			let c;
+			c = a+b;
+			console.log("f4: c=",c);
+		}
+
+		function f5(a,b) {
+			//Funktion mit zwei Übergabevariablen, jedoch ohne Rückgabewert
+			let werte = f5.arguments; //oder: arguments
+			console.log(werte);
+			
+			let c;
+			c = a+b;
+			console.log("f5: c=",c);
+		}
+		
+		function f6(a,b=17,...restlicheWerte) {
+			//Funktion mit zwei Übergabevariablen, jedoch ohne Rückgabewert
+			console.log(restlicheWerte);
+			
+			let c;
+			c = a+b;
+			console.log("f6: c=",c);
+		}
+		
+		function avg0(...werte) {
+			let summe = 0;
+			for(let i=0; i<werte.length; i++) {
+				summe = summe+werte[i];
+			}
+			return summe/werte.length;
+		}
+	
+		function avg1(...werte) {
+			let summe = 0;
+			
+			if(werte.length>0) {
+				for(let i=0; i<werte.length; i++) {
+					summe = summe+werte[i];
+				}
+				return summe/werte.length;
+			}
+			else {
+				return summe;
+			}
+		}
+		
+		function avg2(...werte) {
+			let summe = 0;
+			for(let i=0; i<werte.length; i++) {
+				summe = summe+werte[i]/werte.length;
+			}
+			return summe;
+		}
+		</script>
+	</head>
+	<body>
+		<script>
+		f0(); //Aufruf der Funktion f0
+		f0();
+		for(let i=0; i<100; i++) {
+			f0();
+		}
+		
+		let e0 = f1();
+		console.log("e0=",e0);
+		
+		f2(3,4);
+		f2(17,23);
+		
+		let e1 = f3(4,5);
+		console.log("e1=",e1);
+		
+		// "Spezialfälle":
+		f4(13);
+		f4();
+		
+		f5(2,3,4,7,-23);
+		
+		f6(2,3);
+		f6(2,3,5);
+		f6(23);
+		</script>
+	</body>
+</html>

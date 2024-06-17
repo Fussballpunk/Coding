@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>JavaScript: DOM</title>
+		<meta charset="utf-8">
+		<style>
+		.xy {
+			background-color:yellow;
+		}
+		</style>
+		<script>
+		window.addEventListener("DOMContentLoaded",function() {
+			document.querySelector("#p0").title = "Das ist ein beschreibender Text";
+			document.querySelector("#p0").innerHTML = 'Weiter zum WIFI: <a href="https://www.wifi-ooe.at" target="_blank">zur WIFI OÖ Seite</a>...';
+			document.querySelector("#p0").classList.add("xy");
+		}); //ein Event Listener, der auf das Ereignis "DOMContentLoaded" wartet und als Ereignisbehandlung eine Funktion namens allesBereit zuweist (nicht: aufruft)
+		</script>
+	</head>
+	<body>
+		<script>
+		</script>
+		<p id="p0">Hallo Welt!</p>
+	</body>
+</html>

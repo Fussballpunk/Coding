@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>JavaScript: DOM</title>
+		<meta charset="utf-8">
+		<style>
+		.xy {
+			background-color:yellow;
+		}
+		</style>
+		<script>
+		window.addEventListener("DOMContentLoaded",() => {
+			document.querySelector("#btn0").addEventListener("click",() => {
+				document.querySelector("#p0").classList.add("xy");
+			});
+			
+			document.querySelector("#btn1").addEventListener("click",() => {
+				document.querySelector("#p0").classList.remove("xy");
+			});
+
+			document.querySelector("#btn2").addEventListener("mouseover",() => {
+				document.querySelector("#p0").classList.add("xy");
+			});
+
+			document.querySelector("#btn2").addEventListener("mouseout",() => {
+				document.querySelector("#p0").classList.remove("xy");
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<script>
+		</script>
+		<p id="p0">Hallo Welt!</p>
+		<button id="btn0">füge die Klasse xy hinzu</button>
+		<button id="btn1">entferne die Klasse xy</button>
+		<button id="btn2">füge die Klasse xy hinzu</button>
+	</body>
+</html>

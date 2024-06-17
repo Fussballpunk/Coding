@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>Listen</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!-- gute Quellen:
+		     1. W3Schools (www.w3schools.com)
+		     2. Developer-Site von Mozilla (developer.mozilla.org)
+			 3. W3-Konsortium (www.w3.org)
+			 ----
+			 4. Stackoverflow (www.stackoverflow.com)
+			 5. Can I use? (www.caniuse.com)
+		-->
+		<h1>Listen</h1>
+		<p>Drei Arten von Listen: unnummeriert, nummeriert, Assoziationsliste</p>
+		<h2>Unnummeriert (ul: unordered list; li: list item)</h2>
+		<ul>
+			<li>Punkt A</li>
+			<li>Punkt B</li>
+			<li>Punkt C</li>
+		</ul>
+		<h2>Nummeriert (ol: ordered list; li: list item)</h2>
+		<ol start="23" type="I" reversed>
+			<li>Punkt A</li>
+			<li>Punkt B</li>
+			<li>Punkt C</li>
+		</ol>
+		<h2>Verschachtelte Listen</h2>
+		<ul>
+			<li>1</li>
+			<li>2
+				<ol>
+					<li>2-1</li>
+					<li>2-2
+						<ul>
+							<li>2-2-1</li>
+							<li>2-2-2</li>
+							<li>2-2-3</li>
+						</ul>
+					</li>
+					<li>2-3</li>
+				</ol>
+			</li>
+			<li>3</li>
+			<li>4
+				<ul>
+					<li>4-1</li>
+					<li>4-2</li>
+				</ul>
+			</li>
+		</ul>
+		<p>Nicht korrekt wäre:</p>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<ul>
+				<li>2-1</li>
+				<li>2-2</li>
+				<li>2-3</li>
+			</ul>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<h2>Assoziationsliste (dl: definition list, dt: definition term, dd: definition data)</h2>
+		<dl>
+			<dt>Festplatten</dt>
+			<dd>1x SSD 1TB</dd>
+			<dd>2x HDD 4TB</dd>
+			<dt>Grafikkarten</dt>
+			<dd>NVidia 4090Ti</dd>
+			<dd>AMD Radeon ...</dd>
+		</dl>
+	</body>
+</html>

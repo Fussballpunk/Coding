@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>JS</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			/* nützliche Befehle:
+			   - parseInt(..): Wandelt den Wert in eine Ganzzahl um; Beispiel: parseInt("17.23") --> 17, parseInt(17.23) --> 17, parseInt(17.999) --> 17
+			   - parseFloat(..): Wandelt in eine Kommazahl um; Beispiel: parseFloat("17.23") --> 17.23
+			   - Math.random(): erzeugt eine Zufallszahl zw. 0 und 1 (mit 16 Kommastellen)
+			*/
+			
+			let a = 18, b = 23, c;
+			c = a+b;
+			console.log(c);
+			console.log("c:",c); //bevorzugt, da hier der Typ erkannt werden kann
+			console.log("c:"+c);
+			
+			/*
+			alert("Hallo Welt!"); //alert-Box zum Ausgeben von Informationen
+			let entscheidung = confirm("Wollen Sie das wirklich tun?");
+			console.log("Wie hat sich der User entschieden?",entscheidung);
+			let zahl = prompt("Bitte geben Sie Ihre Lieblingszahl ein:");
+			console.log("Der User hat folgende Zahl eingegeben:",zahl);
+			let zahl2 = parseInt(zahl);
+			console.log("Im Vergleich:",zahl2);
+			
+			document.write("<p>Die Zahl des Users lautet: " + zahl2 + "</p>");
+			*/
+			
+			console.log("Zufallszahl:",Math.random());
+			
+			// ---- if-Anweisung: ----
+			let z = Math.random();
+			if(z>0.5) {
+				console.log("Diese Zahl war größer als 0.5:",z);
+			}
+			else {
+				console.log("Leider nein, die Zahl lautet:",z);
+			}
+			
+			let vn = prompt("Bitte gib Deinen Vornamen ein:");
+			if(vn=="Thomas") {
+				console.log("Hallo Thomas");
+			}
+			else {
+				if(vn=="Sabine") {
+					console.log("Hi");
+				}
+				else {
+					if(vn=="Alex" || vn=="alex") {
+						console.log("Hey Alex");
+					}
+					else {
+						console.log("Hallo Unbekannte/r");
+					}
+				}
+			}
+			
+			// ---- switch-Anweisung: ----
+			switch(vn) {
+				case "Thomas":
+					console.log("Hallo Thomas");
+					break;
+					
+				case "Sabine":
+					console.log("Hi");
+					break;
+					
+				case "Alex":
+				case "alex":
+					console.log("Hey Alex");
+					break;
+					
+				default:
+					console.log("Hallo Unbekannte/r");
+			}
+		</script>
+		<p>Hallo</p>
+	</body>
+</html>

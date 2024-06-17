@@ -1,0 +1,49 @@
+#DM {
+	display:grid;
+	grid-template-columns:15em 1fr;
+	gap:1em;
+	grid-template-areas:
+		"Struktur Inhalt"
+		"Struktur Upload"
+		"Struktur Auswahl"
+		"Struktur VZNeu"
+		"Struktur VZRename"
+		"Struktur VZMove"
+		"Struktur VZDel";
+}
+#Struktur {
+	grid-area:Struktur;
+	background-color:#eee;
+	padding:1em;
+	border-radius:0.5em;
+}
+#Inhalt {
+	grid-area:Inhalt;
+	border:2px solid #eee;
+	border-radius:0.5em;
+	padding:1em;
+}
+#Upload {
+	grid-area:Upload;
+}
+#VZNeu {
+	grid-area:VZNeu;
+}
+#VZDel {
+	grid-area:VZDel;
+}
+#VZRename {
+	grid-area:VZRename;
+}
+#VZMove {
+	grid-area:VZMove;
+}
+
+#BC span,
+#Struktur span {
+	cursor:pointer;
+}
+
+#Auswahl {
+	grid-area:Auswahl;
+}

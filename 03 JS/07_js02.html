@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>JavaScript: Bedinungen</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+		let z = Math.random(); //Zufallszahl zw. 0 und 1 (16 Kommastellen)
+		if(z>0.5) {
+			console.log("Ja, diese Zahl ist größer als 0.5",z);
+		}
+		else {
+			console.log("Nein, diese Zahl ist kleiner-gleich 0.5:",z);
+		}
+		
+		// ---- verschachtelte if-Anweisung: ----
+		let vn = prompt("Bitte geben Sie Ihren Vornamen ein:");
+		if(vn=="Sabine") {
+			console.log("Hallo Sabine");
+		}
+		else {
+			if(vn=="Thomas") {
+				console.log("Hi Tom");
+			}
+			else {
+				if(vn=="Alex") {
+					console.log("Servus Alex");
+				}
+				else {
+					console.log("Hallo Unbekannte/r");
+				}
+			}
+		}
+		
+		/* alternative Schreibweise:
+		if(vn=="Sabine") console.log("Hallo Sabine");
+		else if(vn=="Thomas") console.log("Hi Tom"); 
+		else if(vn=="Alex") console.log("Servus Alex");
+		else console.log("Hallo Unbekannte/r");
+		*/
+		
+		switch(vn) {
+			case "Sabine":
+				console.log("Hallo Sabine");
+				break;
+			case "Thomas":
+				console.log("Hi Tom");
+				break;
+			case "Alex":
+				console.log("Servus Alex");
+				break;
+			default:
+				console.log("Hallo Unbekannte/r");
+		}
+		
+		z = Math.random();
+		if(z<0.2) {
+			console.log("z ist kleiner als 0.2:",z);
+		}
+		else {
+			if(z<0.5) {
+				console.log("z ist zwar größer-gleich 0.2, jedoch kleiner als 0.5:",z);
+			}
+			else {
+				if(z<0.8) {
+					console.log("z ist größer-gleich 0.5, jedoch kleiner als 0.8:",z);
+				}
+				else {
+					console.log("z ist größer-gleich 0.8:",z);
+				}
+			}
+		}
+		
+		switch(true) {
+			case z<0.2:
+				console.log("z ist kleiner als 0.2:",z);
+				break;
+			case z<0.5:
+				console.log("z ist zwar größer-gleich 0.2, jedoch kleiner als 0.5:",z);
+				break;
+			case z<0.8:
+				console.log("z ist größer-gleich 0.5, jedoch kleiner als 0.8:",z);
+				break;
+			default:
+				console.log("z ist größer-gleich 0.8:",z);
+		}
+		</script>
+	</body>
+</html>
