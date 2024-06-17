@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>Bilder</title>
+		<meta charset="utf-8">
+		<style>
+		img, picture {
+			max-width:100%;
+			height:auto;
+		}
+		figure {
+			margin:0;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Bilder</h1>
+		<h2>Das img-Tag für einzelne Bilder</h2>
+		<img src="bilder/640/bird-8011367_640.jpg" alt=".." id="pic23">
+		<img src="bilder/640/bird-8116580_640.jpg" alt="..">
+		<h2>Das picture-Tag für responsive Bilder</h2>
+		<picture>
+			<source srcset="bilder/640/cheetah-8242729_640.png" media="(max-width:640px)">
+			<source srcset="bilder/1280/bird-8011367_1280.jpg" media="(max-width:1280px)">
+			<source srcset="bilder/1920/bird-8116580_1920.jpg" media="(max-width:1820px)">
+			<img src="bilder/wildlife-park-8306984.jpg" alt="..">
+		</picture>
+		<h2>Das figure-Tag für die Beschriftung von Elementen (Medien, etc.)</h2>
+		<figure>
+			<img src="bilder/640/bird-8011367_640.jpg" alt="..">
+			<figcaption>Vogel!</figcaption>
+		</figure>
+		<figure id="figure219">
+			<picture>
+				<source srcset="bilder/640/cheetah-8242729_640.png" media="(max-width:640px)">
+				<source srcset="bilder/1280/bird-8011367_1280.jpg" media="(max-width:1280px)">
+				<source srcset="bilder/1920/bird-8116580_1920.jpg" media="(max-width:1820px)">
+				<img src="bilder/wildlife-park-8306984.jpg" alt="..">
+			</picture>
+			<figcaption>Tier!</figcaption>
+		</figure>
+		<h1>Links</h1>
+		<h2>...auf interne/externe Dokumente</h2>
+		<ul>
+			<li><a href="./01_hallowelt.html">auf Hallo-Welt-Dokument</a></li>
+			<li><a href="bilder/640/cheetah-8242729_640.png">zeige das Bild an</a></li>
+			<li><a href="bilder/640/cheetah-8242729_640.png" download>lade das Bild down</a></li>
+			<li><a href="http://www.orf.at">zum ORF (Inhalt ersetzen)</a></li>
+			<li><a href="http://www.orf.at" target="_blank">zum ORF (neuer Tab/neues Fenster)</a></li>
+		</ul>
+		<h2>...auf Applikationen</h2>
+		<ul>
+			<li><a href="mailto:office@wifi-ooe-at">Mail ans WIFI OÖ</a></li>
+			<li><a href="tel:+4357000">Anruf beim WIFI OÖ</a></li>
+		</ul>
+		<h2>...auf Sprungmarken</h2>
+		<ul>
+			<li><a href="#pic23">Sprungmarke 1</a></li>
+			<li><a href="#figure219">Sprungmarke 2</a></li>
+		</ul>
+	</body>
+</html>

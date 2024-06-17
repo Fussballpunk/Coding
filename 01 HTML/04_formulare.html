@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>Formulare</title>
+		<meta charset="utf-8">
+		<style>
+			label,
+			input:not([type=checkbox]):not([type=radio]),
+			select,
+			textarea {
+				display:block;
+			}
+			label {
+				margin-top:0.8em;
+				margin-bottom:0.2em;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Formulare</h1>
+		<form method="get">
+			<fieldset>
+				<legend>Pflichtangaben</legend>
+				<label for="Em">Bitte geben Sie Ihre Emailadresse ein:</label>
+				<input type="email" name="E" id="Em" required placeholder="zB. test@test.at">
+				<label>
+					Passwort:
+					<input type="password" name="P" required>
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>freiwillige Angaben</legend>
+				<label>
+					Telefonnummer:
+					<input type="tel" name="T">
+				</label>
+				<label>
+					Geb-Datum:
+					<input type="date" name="GD">
+				</label>
+				<input type="color" name="LF">
+				<input type="text" name="VN" value="Harald">
+				<input type="number" step="0.1" min="3.2" max="6.8" name="LZ">
+			
+			
+				<label>
+					<input type="radio" name="CC" value="Amex">
+					American Express
+				</label>
+				<label>
+					<input type="radio" name="CC" value="MC">
+					Master Card
+				</label>
+				<label>
+					<input type="radio" name="CC" value="VC" checked>
+					Visa
+				</label>
+				<label>
+					<input type="radio" name="CC" value="EC">
+					Bankomat
+				</label>
+				
+				<label>
+					Geburtsland:
+					<select name="GebLand">
+						<option value="AT">Österreich</option>
+						<option value="IT">Italien</option>
+						<option value="IN" selected>Indien</option>
+					</select>
+				</label>
+				<!--
+				<select name="Staat" multiple>
+					<option value="AT">Österreich</option>
+					<option value="IT">Italien</option>
+					<option value="IN" selected>Indien</option>
+				</select>
+				-->
+			</fieldset>
+			
+			<textarea name="NR"></textarea>
+			
+			<label>
+				<input type="checkbox" name="AGB" value="ja">
+				Ich akzeptiere die AGB
+			</label>
+			<input type="submit" value="und ab!">
+		</form>
+	</body>
+</html>
